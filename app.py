@@ -1,47 +1,34 @@
 from flask import Flask, request, jsonify, render_template
 import joblib
-
-# # Load the trained model
-# model = joblib.load('model_MooQ_dt.pkl')
-
-# # Initialize the Flask app
-# app = Flask(__name__, static_url_path='/templates/assets', static_folder='static')
-
-# @app.route('/')
-# def serve_index():
-#     return render_template('/index.html')
-
-# @app.route('/predict', methods=['POST'])
-# def predict():
-#     data = request.json
-#     features = [
-#         data['ph_value'],
-#         data['temperature'],
-#         data['taste'],
-#         data['odor'],
-#         data['fat'],
-#         data['turbidity'],
-#         data['colour']
-#     ]
-#     prediction = model.predict([features])
-#     return jsonify({'grade': prediction[0]})
-
-
-# if __name__ == '__main__':
-#     app.run(debug=True)
-
-from flask import Flask, render_template
+import numpy as np
 
 app = Flask(__name__)
+model = joblib.load('model_MooQ_dt.pkl')
 
 @app.route('/')
-def index():
+def home():
     return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    # Your prediction logic goes here
-    return jsonify({'grade': 'A'})  # Placeholder response
+    try:
+        ph_value = float(request.form['ph_value'])
+        temperature = float(request.form['temperature'])
+        taste = int(request.form['taste'])
+        odor = int(request.form['odor'])
+        fat = int(request.form['fat'])
+        turbidity = int(request.form['turbidity'])
+        colour = int(request.form['colour'])
+
+        features = np.array([[ph_value, temperature, taste, odor, fat, turbidity, colour]])
+        prediction = model.predict(features)
+
+        # Convert prediction to a standard Python int
+        prediction_int = int(prediction[0])
+
+        return jsonify({'gradeOutput': prediction_int})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)
