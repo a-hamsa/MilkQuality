@@ -8,35 +8,28 @@
     <meta content="" name="keywords" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-
+    <link href="{{ url_for('static', filename='/assets/img/logo.png') }}" rel="icon" />
+    <link href="{{ url_for('static', filename='/assets/apple-touch-icon.png') }}" rel="apple-touch-icon" />
+  
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-
+      rel="stylesheet" />
+  
     <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-
+    <link href="{{ url_for('static', filename='/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='/assets/vendor/aos/aos.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet" /><section id="anggotaKelompok">
+    <link href="{{ url_for('static', filename='/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet" />
+  
+  
     <!-- Main CSS File -->
-    <link href="main.css" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='assets/css/main.css') }}" rel="stylesheet" />
+  
 
     <style>
         .color-box {
@@ -65,14 +58,14 @@
         >
           <a href="index.html" class="logo d-flex align-items-center me-auto">
             <h1 class="sitename">MOO</h1>
-            <img src="assets/img/logo.png" alt="" />
+            <img src="{{ url_for('static', filename='/assets/img/logo.png') }}" alt="" />
           </a>
   
           <nav id="navmenu" class="navmenu">
             <ul>
-              <li><a href="index.html#hero">Home</a></li>
-              <li><a href="index.html#classification">Classification</a></li>
-              <li><a href="index.html#anggotaKelompok">Team</a></li>
+              <li><a href="/#hero">Home</a></li>
+              <li><a href="/#classification">Classification</a></li>
+              <li><a href="/#team">Team</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>

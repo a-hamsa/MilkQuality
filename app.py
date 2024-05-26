@@ -29,6 +29,10 @@ def predict():
         return jsonify({'gradeOutput': prediction_int})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+    
+@app.route('/warna')
+def warna():
+    return render_template('warna.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

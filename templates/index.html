@@ -9,7 +9,7 @@
   <meta content="" name="keywords" />
 
   <!-- Favicons -->
-  <link href="{{ url_for('static', filename='/assets/favicon.png') }}" rel="icon" />
+  <link href="{{ url_for('static', filename='/assets/img/logo.png') }}" rel="icon" />
   <link href="{{ url_for('static', filename='/assets/apple-touch-icon.png') }}" rel="apple-touch-icon" />
 
   <!-- Fonts -->
@@ -51,9 +51,9 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero">Home</a></li>
-          <li><a href="index.html#classification">Classification</a></li>
-          <li><a href="index.html#anggotaKelompok">Team</a></li>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#classification">Classification</a></li>
+          <li><a href="#team">Team</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -87,37 +87,48 @@
         <h1>MOOQ Classification</h1>
         <form id="qualityForm">
           <!-- form fields -->
-          <input type="number" id="ph_value" name="ph_value" step="0.1" min="0" max="14" required>
-          <input type="number" id="temperature" name="temperature" placeholder="Masukkan temperatur" required>
-          <select id="taste" name="taste" required>
-            <option value="0">Tidak enak</option>
-            <option value="1">Enak</option>
-          </select>
-          <select id="odor" name="odor" required>
-            <option value="0">Tidak berbau</option>
-            <option value="1">Berbau</option>
-          </select>
-          <select id="fat" name="fat" required>
-            <option value="0">Rendah</option>
-            <option value="1">Tinggi</option>
-          </select>
-          <select id="turbidity" name="turbidity" required>
-            <option value="0">Rendah</option>
-            <option value="1">Tinggi</option>
-          </select>
-          <input type="number" id="colour" name="colour" min="0" max="255" required>
-          <button type="button" onclick="submitForm()">Hitung Grade</button>
+          <label for="ph_value">pH Value:</label>
+  <input type="number" id="ph_value" name="ph_value" step="0.1" min="0" max="14" required><br><br>
+
+  <label for="temperature">Temperature (°C):</label>
+  <input type="number" id="temperature" name="temperature" placeholder="Masukkan temperatur" required><br><br>
+
+  <label for="taste">Taste (0: Tidak enak, 1: Enak):</label>
+  <select id="taste" name="taste" required>
+    <option value="0">Tidak enak</option>
+    <option value="1">Enak</option>
+  </select><br><br>
+
+  <label for="odor">Odor (0: Tidak berbau, 1: Berbau):</label>
+  <select id="odor" name="odor" required>
+    <option value="0">Tidak berbau</option>
+    <option value="1">Berbau</option>
+  </select><br><br>
+
+  <label for="fat">Fat Content (0: Rendah, 1: Tinggi):</label>
+  <select id="fat" name="fat" required>
+    <option value="0">Rendah</option>
+    <option value="1">Tinggi</option>
+  </select><br><br>
+
+  <label for="turbidity">Turbidity (0: Rendah, 1: Tinggi):</label>
+  <select id="turbidity" name="turbidity" required>
+    <option value="0">Rendah</option>
+    <option value="1">Tinggi</option>
+  </select><br><br>
+
+  <label for="colour"><a href="/warna" target="_blank">Colour range (0-255):</a></label>
+  <input type="number" id="colour" name="colour" min="0" max="255" required><br><br>
+          <button type="button" class="btn-submit" onclick="submitForm()">Hitung Grade</button>
         </form>
-         <div class="result" id="resultSection"> 
-           <!-- style="display: none;"  -->
+        <div class="result" id="resultSection">
           <h2>Grade:</h2>
           <p id="gradeOutput"></p>
-        </div>
       </div>
     </section>
     <!-- Featured Services Section-2 -->
-    <section id="anggotaKelompok">
-      <div id="anggotaKelompok" class="container-fluid text-center">
+    <section id="team">
+      <div class="container-fluid text-center">
         <br>
         <h2>ANGGOTA KELOMPOK</h2>
         <h4>Tim DS MOOQ </h4>
