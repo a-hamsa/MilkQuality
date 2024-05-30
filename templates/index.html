@@ -43,7 +43,7 @@
 <body class="index-page">
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <a href="/" class="logo d-flex align-items-center me-auto">
         <h1 class="sitename">MOO</h1>
         
         <img src="{{ url_for('static', filename='assets/img/logo.png') }}" alt="" />
@@ -80,6 +80,69 @@
       </div>
     </section>
     <!-- /Hero Section -->
+
+
+    <!-- Sectioan about -->
+    <section id="about">
+      <div id="about" class="tentang mooq">
+        <br>
+        <h2>About MOOQ</h2>
+        <h4>MooQ, a trusted friend for milk producers. This smart application, based on artificial intelligence, makes it easy to monitor milk quality. With fast and accurate analysis capabilities, MooQ ensures that dairy products meet the highest quality standards. By using MooQ, producers can be sure that the milk is always in the best condition.</h4>
+        <h2>Classification Features</2>
+        <br>
+        <div class="row slideanim">
+           <div class="col-sm-4">
+            <span class="glyphicon glyphicon-user logo-small"></span>
+             <img src="{{ url_for('static', filename='assets/img/pH-Value.webp') }}" alt="member photo">
+             <h4>pH</h4>
+             <p>Optimal milk pH helps maintain microbiological stability and extends shelf life. A good pH in milk generally ranges from 6.5 to 6.7.</p>
+             
+            </div>
+            <div class="col-sm-4">
+              <span class="glyphicon glyphicon-user logo-small"></span>
+              <img src="{{ url_for('static', filename='assets/img/temperature.png') }}" alt="member photo">
+              <h4>Temperature</h4>
+              <p>A temperature range of around 0-4 degrees Celsius (32-39 degrees Fahrenheit) helps maintain milk freshness and prevents the growth of unwanted bacteria.</p>
+            </div>
+            <div class="col-sm-4">
+              <span class="glyphicon glyphicon-user logo-small"></span>
+              <img src="{{ url_for('static', filename='assets/img/odor.png') }}" alt="member photo">
+              <h4>Odor</h4>
+              <p>A good odor in milk should be fresh and neutral. Good milk should not have a strong or unusual odor.</p>
+            </div>
+          </div>
+          <br>
+          <div class="row slideanim">
+            <div class="col-sm-4">
+              <span class="glyphicon glyphicon-user logo-small"></span>
+              <img src="{{ url_for('static', filename='assets/img/taste.png') }}" alt="member photo">
+              <h4>Taste</h4>
+              <p> High-quality milk should have a delicious and pleasant taste, without any noticeable sour or bitter taste.</p>
+            </div>
+           <div class="col-sm-4">
+              <span class="glyphicon glyphicon-user logo-small"></span>
+              <img src="{{ url_for('static', filename='assets/img/fat.png') }}" alt="member photo">
+              <h4>Fat</h4>
+              <p>Healthy fresh milk has natural fat content, which provides the desired flavor and creaminess.</p>
+            </div>
+            <div class="col-sm-4">
+              <span class="glyphicon glyphicon-user logo-small"></span>
+              <img src="{{ url_for('static', filename='assets/img/turbidity.png') }}" alt="member photo">
+              <h4>Turbidity</h4>
+              <p>High levels of turbidity can be an indication of contamination or fouling, which can affect the quality of the milk</p>
+            </div>
+          </div>
+          <br>
+          <div class="row slideanim">
+           <div class="col-sm-4">
+              <span class="glyphicon glyphicon-user logo-small"></span>
+              <img src="{{ url_for('static', filename='assets/img/color.png') }}" alt="member photo">
+              <h4>Color</h4>
+              <p>Good fresh milk has a clean, clear white color, indicating its quality and cleanliness.</p>
+            </div>
+          </div>
+        
+        </section>
 
     <!-- Featured Services Section 1 -->
     <section id="classification">
@@ -128,7 +191,7 @@
     </section>
     <!-- Featured Services Section-2 -->
     <section id="team">
-      <div class="container-fluid text-center">
+      <div class="nama-nama">
         <br>
         <h2>ANGGOTA KELOMPOK</h2>
         <h4>Tim DS MOOQ </h4>
